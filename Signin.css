@@ -1,0 +1,112 @@
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    background-color: rgb(229, 248, 248);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
+
+    padding: 0 6rem 0 6rem;
+    /* background-color: rgb(248,248,248); */
+}
+*{
+    /* border: solid red; */
+}
+.body{
+    justify-content: center;
+    /* margin: auto; */
+    text-align: center;
+    width: 65%;
+    padding-bottom: 20px;
+    
+
+}
+.last-total {
+    width: 300px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+    height: 25vh;
+
+}
+.head2{
+    background-color: rgb(0, 255, 0);
+
+}
+.body h5{
+    
+    justify-items: center;
+    background-color: rgb(0, 255, 0);
+    padding: 1rem;
+}
+#logemail{
+    background-color: rgba(0, 0, 0, 0.274);
+}
+.toptop{
+    /* justify-content: space-between; */
+}
+.firstinput{
+    display: flex;
+    justify-content: space-between;
+}
+#username, #surname,#email, #pwd,#confirmpwd{
+height: 45px;
+}
+#femal, #mal, #custo{
+    border: solid 1px rgb(80, 78, 78);
+    border-radius: 5px;
+    background-color: rgb(219, 230, 240);
+}
+#date{
+    width: 50;
+}
+
+
+.header {
+    font-size: 24px;
+    justify-content: center;
+   
+}
+.header span{
+    font-weight: bolder;
+}
+.input {
+    /* width: 98%; */
+    width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+
+}
+
+
+@media (max-width: 767px) {
+    body {
+        padding: 0 1rem 0 1rem;
+        background-color: rgb(131, 161, 161);
+    }
+    .body{
+        justify-content: center;
+        /* margin: auto; */
+        text-align: center;
+        width: 100%;
+        padding-bottom: 0px;
+    
+    }
+    .end{
+        background-color: rgb(0, 255, 0);
+        margin-left: 50%;
+        
+    }
+}
+.myAccount{
+    /* margin-left: 50%; */
+}
+/* .input div {
+    width: 50%;
+} */
+/* #signin:active .contain{
+    display: block;
+} */
+/*  */

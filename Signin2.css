@@ -1,0 +1,32 @@
+/* sign in */
+*{
+    /* border: solid red; */
+}
+.body{
+    justify-content: center;
+    /* margin: auto; */
+}
+.contain{
+    /* padding: 9%; */
+    height: 100vh;
+    background-image: url(AppIMG/cMEvObXidLmdKporWALyGZurRNnWoczEJLfS9POd.jpg);
+    background-color: rgba(2, 20, 60, 0.887);
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+.firstinput{
+    display: flex;
+    justify-content: space-between;
+}
+#username, #surname,#email, #pwd,#confirmpwd{
+height: 45px;
+}
+#femal, #mal, #custo{
+    border: solid 1px rgb(80, 78, 78);
+    border-radius: 5px;
+    background-color: rgb(219, 230, 240);
+}
+#date{
+    width: 50;
+}
+/*  */

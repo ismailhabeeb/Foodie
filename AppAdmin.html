@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurantApp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+    <div class="offcanvas offcanvas-start" id="demo">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title"> <div>
+            <a href="AppAdmin.html" class="header-logo text-primary">Foodie <span class="header-dot">.</span></a>
+            <div class="logo-note h6">when food matters🍴</div>
+        </div></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          
+           <div class="mt-2 mb-2">
+            <button class="btn w-100 lil btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Add to List</button>
+            <input type="file" id="file" onchange="previewImg()" hidden>
+                <button class="btn lil w-100 btn-primary" onclick="document.getElementById('file').click()">Edit profile picture</button>
+           </div>
+          <p class="login-as bg-primary">Login as <img src="AppIMG/arrow-down-sign-to-navigate.png" width="20px" alt=""></p>
+
+            <a id="man" class="btn btns mx-auto" href="AppSignIn.html">Users</a>  
+            <a id="man" href="AppLandingpage.html" class="btn btn-danger " type="button">Log out</a>
+           
+        </div>
+    </div>
+    
+    <header class="hearder"  data-header>
+        <div class="container">
+            <div>
+                <a href="AppAdmin.html" class="header-logo text-primary">Foodie <span class="header-dot">.</span></a>
+                <div class="logo-note">when food matters🍴</div>
+            </div>
+            
+            <nav class="navba" data-navbar >
+               
+                  
+                  
+                    
+                <div class="account navbar d-flex ">
+                    <img id="img2" src="AppIMG/dp.jpg" width="40px" height="40px" alt="">
+                    <span class="btn d-inline" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"> 
+                        <span id="adminname"></span><img src="AppIMG/arrow-down-sign-to-navigate.png" width="20px" alt="">
+                    </span>
+              
+                </div>
+                <nav class="navbar">
+                    <li class="navbar-item">
+                        <a  href="#home" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#speciality" class="navbar-link" data-nav-link>Specialty</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#porpular" class="navbar-link" data-nav-link>Porpular</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#menu" class="navbar-link" data-nav-link>Menu</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#review" class="navbar-link" data-nav-link>Review</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#book" class="navbar-link  " data-nav-link>Reservation</a>
+                    </li>
+                </nav>
+            </nav>
+            <a class="navbar-lin  " href="reservation.html"><img src="AppIMG/shopping-cart.png" alt="" width="60px" srcset="" class=" btn rounded-circle ">
+                <span style="margin: 0px 0 0 -24px;" id="cartNo" class=" h4 text-danger rounded-circle bg-dark ps-1 pe-1">0</span></a>
+            <div class="header-btn-group">
+                <button class="nav-toggle-btn " aria-label="Toggle Menu" data-nav-toggle-btn>
+                    <span class="line top"></span>
+                    <span class="line middle"></span>
+                    <span class="line bottom"></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+    
+    <main class="hero" id="home">
+        <div class="containe view d-flex">
+                <div class="hero-content ">
+                    <p class="hero-sub ">Eat Sleep And</p>
+                    <h2 class="h3 fw-bold text-light hero-title" >Supper delicious Burger in town!</h2>
+                    <p class="hero-text">Food is any substnace consumed to provide nutritional support for an organism.</p>
+                    <a href="#book" class="btn btns btn-warning text-light fw-bold btn-hover">Book A Table</a>
+                </div>
+            <figure class="hero-banner ">
+                <img  src="AppIMG/the-most-american-thickburger.0.0-removebg-preview.png" alt="">
+            </figure>
+        </div>
+        <main class="mt-0 carousel-caption ">
+            <div>
+                <span>⭐⭐⭐⭐⭐</span><span> 📝3 Reviews</span><span>💴₦ 100 - ₦10,000</span><span>🍴• African• Arab•
+                    Comfort food• Nigerian</span><span>👤Maximum Party Size: 70 people</span>
+            </div>
+        </main>
+    </main>
+    <div id="back-top" class="btn btns btn-hover bg-warning" style="display: block;"><a title="Top" href="#home">⬆️</a></div>
+
+    <main class="secondmain">
+        <section class="speciality w-100 mb-5" id="speciality">
+            <h1 class="hearding">our <span>speciality</span></h1>
+            <div class="box-container" id="me">
+
+            </div>
+            <button id="more"  onclick="firstmore(event)" class="more btn btn-hover">more</button>
+        </section>
+    
+        <section class="porpular  mb-5" id="porpular">
+            <h1 class="hearding">Most <span> Porpular </span> <span>foods</span></h1>
+           <div class="box-container" id="porpular-items">        
+           </div>    
+           <button onclick="secondmore(event)" class="more btn btn-hover btns">more</button>
+        </section>
+        <section class="steps">
+            <div class="box">
+                <img src="AppIMG/fast-food.png" alt="">
+                <h5>Choose your favourite food</h5>
+            </div>
+            <div class="box">
+                <img src="AppIMG/delivery-man.png" alt="">
+                <h5>Free and fast Delivary</h5>
+            </div>
+            <div class="box">
+                <img src="AppIMG/delivery-box.png" alt="">
+                <h5>easy payments methods</h5>
+            </div>
+            <div class="box">
+                <img src="AppIMG/person food.png" alt="">
+                <h5>and finally, enjoy your foods</h5>
+            </div>
+        </section>
+
+        <section class="menu  mb-5" id="menu">
+            <h1 class="hearding">our <span>menu</span></h1>
+            <div class="box-container" id="menu-items">       
+            </div>
+            <button onclick="thirdmore(event)" class="more btn btn-hover btns">more</button>
+        </section>
+
+        <section class="review" id="review">
+            <h1 class="hearding">our <span>reveiw</span></h1>
+            <div class="box-container">
+                <div class="box card">
+                    <img  src="AppIMG/images (1).jpg" alt="">
+                    <div class="content">
+                        <h3>Heritage</h3>
+                        <div class="stars">⭐⭐⭐⭐</div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla corrupti voluptas perspiciatis</p>
+                    </div>
+                </div>
+                <div class="box card">
+                    <img  src="AppIMG/images (1).jpg" alt="">
+                    <div class="content">
+                        <h3>Tom</h3>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla corrupti voluptas perspiciatis</p>
+                    </div>
+                </div>
+                <div class="box card">
+                    <img  src="AppIMG\IMG-20211205-WA0001.jpg" alt="">
+                    <div class="content">
+                        <h3>Vee</h3>
+                        <div class="stars">⭐⭐⭐</div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla corrupti voluptas perspiciatis</p>
+                    </div>
+                </div>
+                <div class="box card">
+                    <img  src="AppIMG\IMG_1363.jpg" alt="">
+                    <div class="content">
+                        <h3>Mahish</h3>
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla corrupti voluptas perspiciatis</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="order"  id="book">
+            <h1 class="hearding">or Book a <span>Table</span></h1>
+            <div class="box-container" id="menu-items">
+                <div class="box1 ">
+                    <img class="card" src="AppIMG/waiter1.webp" alt="">
+                </div>
+                <div class="box2">
+                    <form id="booking" class="was-validated card p-4 " >
+                        <h3>Book a Table </h3>
+                        <div class="box2-content">
+                            <div class="d-flex mb-3">
+                                <input type="text" class="form-control " id="your-name" placeholder="your name"
+                                     required >
+                                <input type="email" class="form-control " id="your-name" placeholder="email@email"
+                                    required >
+                            </div>
+        
+                            <div class="d-flex mb-3">
+                                <input type="number" min="2" max="20" class="form-control " id="your-name" placeholder="person"
+                                     required >
+                                <input type="datetime-local"  class="form-control " id="your-name" placeholder="your name"
+                                     required >
+                            </div>
+                            <textarea name="" id="booktext" cols="50" rows="5" placeholder="massages"></textarea>
+                        </div>
+                        <button class="btn btns text-light fw-bold btn-hover w-50 mx-auto">Book a Table</button>
+                    </form>
+        
+                  
+                </div>
+        
+            </div>
+        </section>
+        
+
+    </main>
+
+    <section class="footer">
+        <h3>Opening Hours 🕰️</h3>
+
+        <div class="box1">
+            <h4>Monday-Friday:08:00-22:00</h4>
+            <h4>Tuesday 4PM Till Mid Night</h4>
+            <h4>Saturday: 10:00-16:00</h4>
+        </div>
+        
+    </section>
+    <footer class="thanks bg-primary">
+        <main class="content mt-3">
+            <section>
+                <div>
+                    <h3>Dining Style</h3>
+                        <li>•Outdoor seating</li>
+                        <li>•Casual Dress</li>
+                        <li>•Fine Dining</li>
+                        <li>•Casual Dinning</li>
+                        <li>•Business Meals</li>
+                        <li>•Disabled Access</li>
+                </div>
+        
+            </section>
+            <section>
+                <div>
+                    <h3>Cuisine</h3>
+                        <li>•African</li>
+                        <li>•Arab</li>
+                        <li>•Comfort food</li>
+                        <li>•Nigerian</li>
+                        <li>•Steakhous</li>
+                        <li>•barbecue</li>
+                </div>
+        
+            </section>
+            <section >
+                <h3> Company</h3>
+                <div>
+                    <a href="#"> About us</a>
+                    <a href="#"> Our Story</a>
+                    <a href="#">  Careers</a>
+                    <a href="#">  News</a>
+                    <a href="#">  Privacy Policy</a>
+                    <a href="#">  Terms & Conditions</a>
+                 </div>
+            </section>
+            <section id="nn">
+                <h3> Products </h3>
+                    <a href="#"> Sunfresh Bread </a>
+                    <a href="#"> Sunfresh Ice-cream </a>
+                    <a href="#"> Sunfresh Water </a>
+            </section>
+            <section id="nn">
+                <h3>Support </h3>
+                    <a href="#"> Contact us </a>
+                    <a href="#"> FAQs </a>
+                    <a href="#"> Chat with us </a>
+            </section>
+        </main>
+        <div class="sociallink">               
+                <a href="#" class="btn  text-light fw-bold btn-hover ">Facebook</a>
+                <a href="#" class="btn  text-light fw-bold btn-hover ">Linkedin</a>
+                <a href="#" class="btn  text-light fw-bold btn-hover ">Github</a>
+                <a href="#" class="btn  text-light fw-bold btn-hover ">Mail</a>
+        </div>
+    </footer>
+    <div class="text-center">
+        © coded ByMahish All right reserved.
+
+    </div>
+
+    <div class="modal w-100 bg-dark" id="myModal">
+        <div class="modal-dialog  ">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="offcanvas-title"> <div>
+                        <a href="AppAdmin.html" class="header-logo text-primary">Foodie <span class="header-dot">.</span></a>
+                        <div class="logo-note h6">when food matters🍴</div>
+                    </div></h1>
+                        <button type="button" class="btn-close mb-4" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <!-- <form action="" > -->
+                        <div class="firstinput ">
+                        <img id="preview" src="AppIMG/burger-icon.png" width="60%" alt="" class="">
+
+                        <input type="file" id="file" onchange="previewImg()" hidden>
+                        <button class="btn btn-primary w-100" onclick="document.getElementById('file').click()">Add picture</button>
+                  
+                        <div class="form-floating mt-3">
+                            <input type="number" class="form-control" id="Food-price"
+                                placeholder="Enter Food-price" required>
+                            <label for="Food-price">Food-price</label>
+                        </div>
+                        <div class="form-floating mt-3">
+                            <input type="text" class="form-control" id="Food-name"
+                                placeholder="Enter Food-name" required>
+                            <label for="Food-name">Food-name</label>
+                        </div>
+
+
+                          
+                        <a href="#"   onclick="addtolist()"  class="btn btn-success w-50  h4 mx-auto mt-3" style="background: rgb(54,164,32);">Add to menu</a>
+                    <!-- </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <span id="username" hidden></span>
+</body>
+</html>
+<script src="App.js"></script>
