@@ -150,7 +150,12 @@ const myCheck = document.getElementById("myCheck");
 //login 
 let logPassword = document.getElementById("logpwd");
 let logEmail = document.getElementById("logemail");
-let Users = []
+let Users = [{username: "m", 
+            email: "a", 
+            password: "h", 
+            surname: "i",
+            conpws: "s",
+        },]
 let me = []
 
 // let data = localStorage.getItem("Users")
@@ -182,7 +187,7 @@ function onSubmit(){
             email: email.value, 
             password: password.value, 
             surname: surname.value,
-            conpws: conpws.value
+            conpws: conpws.value,
         });
         // console.log(Users)  
        }   
@@ -215,17 +220,7 @@ function onSubmit(){
    }else{
     alert("wronge pasword or email")
    }
-    
-    // parsedData.map((value, index) => {
-    //     console.log(value.email)
-    //     console.log(value.password)
-    //     if (value.email == logEmail.value & value.password == logPassword.value) {
-    //         document.getElementById("logform").action="App.html"
  
-    //         document.getElementById("pagelogin").hidden = true
-    //     }
-    // })
-    
   }
 
 </script>

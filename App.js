@@ -94,10 +94,16 @@ let Menlength = 8;
     // if (newme != null) {
     //     newfood = newme
     // }
-window.addEventListener('load', () => {  
-    console.log(ade)
-    console.log(newfood)
-})
+    let newarray = []
+    let ade = JSON.parse(localStorage.getItem("restaurant"));
+    if (ade != null) {
+        newarray = ade
+    }
+    
+const newimg = document.getElementById("preview");
+const newfoodname = document.getElementById("Food-name");
+const newfoodprice = document.getElementById("Food-price");
+
 function specialty(you){
     for (let index = 0; index < you; index++) {    
         document.getElementById("me").innerHTML+=
@@ -153,7 +159,7 @@ function porpular(and){
             <div class="stars pb-2">⭐⭐⭐⭐
                 
             </div>
-            <a href="#porpular-items" onclick="firstorder(${index})" class="btn btns btn-warning text-light fw-bold btn-hover"> Order now</a>
+            <a href="#porpular-items" onclick="firstorder(${index})" class="btn btns btn-warning text-light fw-bold btn-hover mw"> Order now</a>
 
     </div>
         `
@@ -214,12 +220,16 @@ menu(Menlength)
   }
 }
 let b = document.getElementById("cartNo").innerHTML 
+    document.getElementById("cartNo").innerHTML = newarray.length
+    let getuser = JSON.parse(localStorage.getItem("currentuser"));
+    console.log(getuser);
+    document.getElementById("username").innerHTML = getuser.username;
+    
+    let getadmin = JSON.parse(localStorage.getItem("currentadmin"));
+    console.log(getadmin);
+    console.log(getadmin.username);
+    document.getElementById("adminname").innerHTML = getadmin.username;
 
-let newarray = []
-    let ade = JSON.parse(localStorage.getItem("restaurant"));
-    if (ade != null) {
-        newarray = ade
-    }
 function firstorder(param){
     b = newarray.length
     b++
@@ -237,15 +247,7 @@ function secondorder(para){
 
 }
 
-document.getElementById("cartNo").innerHTML = newarray.length
-let getuser = JSON.parse(localStorage.getItem("currentuser"));
-console.log(getuser);
-document.getElementById("username").innerHTML = getuser.username;
 
-let getadmin = JSON.parse(localStorage.getItem("currentadmin"));
-console.log(getadmin);
-console.log(getadmin.username);
-document.getElementById("adminname").innerHTML = getadmin.username;
 async function previewImg() {
     const file = document.getElementById('file').files[0];
     const image = document.getElementById('img');
@@ -301,10 +303,7 @@ function previewImg() {
         }
     }
 // ADD TO LIST
-let newMenu = []
-const newimg = document.getElementById("preview");
-const newfoodname = document.getElementById("Food-name");
-const newfoodprice = document.getElementById("Food-price");
+
 function addtolist(){
     newMenu.push({
         food: newimg.src, 
@@ -332,3 +331,7 @@ function addreview(){
                 </div>
     `
 }
+window.addEventListener('load', () => {  
+    console.log(ade)
+    console.log(newfood)
+})

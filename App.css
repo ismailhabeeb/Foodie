@@ -405,9 +405,7 @@ text-align: center;
 .order .box-container .box2{
     height: 100%;
     width: 50%;
-    /* object-fit: cover; */
     box-shadow: 0 .5rem 1rem rgba(0,0, 0,.3);
-
 }
 .order .box-container .box1 img{
     height: 100%;
@@ -553,6 +551,7 @@ display: block;
     }
     .secondmain{
         padding: 0;
+            background-color: rgb(248,248,248);
     
     }
     .header-btn-group {
@@ -585,7 +584,7 @@ display: block;
         transition: 0.25s ease;
     }
     .box{
-        width: 100%;
+        width: 48%;
     }
     .navba .navbar{
         display: flex;
@@ -641,4 +640,98 @@ display: block;
 #nn{
     display: none;
 }
+.menu .box-container, .porpular .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.porpular .box-container .box{
+    height: 15rem;
+    flex: flex;
+   flex-wrap: wrap;
+   width: 198px;
+   padding: 2px;
+   /* border: 1rem solid rgb(7, 22, 1);
+   box-shadow: 0 .5rem 1rem rgba(0,0, 0,.3); */
+}
+.menu .box-container .box{
+    height: 15rem;
+     flex: flex;
+    flex-wrap: wrap;
+    width: 198px;
+    border: 1rem solid rgb(7, 22, 1);
+    box-shadow: 0 .5rem 1rem rgba(0,0, 0,.3);
+    position: relative;
+    overflow: hidden;
+}
+.porpular .box-container .box img{
+    height: 8rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: .5rem;
+    }
+    .porpular .box-container .box .price{
+        top: 1.0rem; left: 3rem;
+        width: 98px;
+        height: 30px;
+        background-color: red;
+        color: #fff;
+        padding: .2rem .5rem;
+        border-radius: .5rem;
+    }
+    .porpular .box-container .box h3{
+        color: #333;
+        font-weight: 400;
+    
+        /* padding-top: 1rem; */
+    }
+    .stars{
+        
+        margin: -10px 0;
+        padding: 0;
+    }
+    .mw{
+        padding: 2px;
+        /* margin-top: -18px; */
+    }
+    .review .box-container {
+        /* display: flex; */
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        padding: 30px 0;
+        min-height: 300px;
+       
+    }
+    .review .box-container .box{
+       
+       min-width: 210px;
+        height: 250px;
+    }
+    .more{
+        width: 70px;
+        height: 70px;
+    }
+    .footer .box1{
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+    .footer h3{
+        margin-top: 20px;
+        padding: 0 0 0 25px;
+    }
+    .footer .box1 h4{
+        padding: 0 0 0 28px;
+        margin-bottom: 10px;
+    }
+    .order .box-container .box{
+        height: 100%;
+        width: 100%;
+        box-shadow: 0 .5rem 1rem rgba(0,0, 0,.3);
+    }
+}
+.footer h3{
+    margin-top: 20px;
 }
